@@ -96,6 +96,7 @@ section#ficha h1{
   font-size: 1.5em;
 }
 
+
 /* ===========================
    Social
 =========================== */
@@ -255,8 +256,20 @@ footer a{
 }
 
 @media screen and (min-width:768px) {
+  main{
+    grid-template-columns: auto 300px 1fr auto;
+  }
+  section#ficha{
+   grid-column: 2/3;
+   height: fit-content;
+   position: sticky;
+   top: 50px;
+  }
+  section#detalhes{
+    grid-column: 3/4;
+  }
   #skills-container{
-    grid-template-columns: 1fr 1fr;
+    grid-columns: 1fr 1fr;
   }
   #projeto-container .projeto{
     flex-direction: row-reverse;
