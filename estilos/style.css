@@ -19,11 +19,22 @@
 /* ===========================
    Geral
 =========================== */
+body.escuro{
+--fundo-principal:#222222;
+  --texto:#e0e0e0;
+  --texto-inverso:#333333;
+  --destaque:#ff5522;
+  --destaque-inverso:#a73917;
+  --fundo-card:#444444;
+}
+
 body{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.5em;
   background-color: var(--fundo-principal);
   color: var(--texto);
+  transition: bakgraund-color 0.5s , color 0.5s;
+
 }
 
 header{
@@ -74,7 +85,7 @@ main{
 =========================== */
 section#ficha{
   background-color: var(--fundo-card);
-  padding: 20px;
+  padding:  10px;
   border-radius: 8px;
   grid-column: 2;
 }
@@ -112,12 +123,16 @@ section#ficha h1{
 #social a{
   color: var(--destaque);
   transition: color .5s;
+  position:relative;
 }
+
 
 #social a:hover{
   color: var(--destaque-inverso);
 }
-
+div#social{
+  padding-left: 0px;
+}
 /* ===========================
    Artigos
 =========================== */
@@ -264,9 +279,11 @@ footer a{
    height: fit-content;
    position: sticky;
    top: 50px;
+   
   }
   section#detalhes{
     grid-column: 3/4;
+    padding-left: 20px;
   }
   #skills-container{
     grid-columns: 1fr 1fr;
